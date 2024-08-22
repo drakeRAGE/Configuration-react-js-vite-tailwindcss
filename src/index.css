@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Light Theme */
+html.light {
+    --bg-color: #f9fafb;
+    --text-color: #1f2937;
+    --secondary-text-color: #4b5563;
+    --border-color: #d1d5db;
+}
+
+/* Dark Theme */
+html.dark {
+    --bg-color: #1f2937;
+    --text-color: #f3f4f6;
+    --secondary-text-color: #9ca3af;
+    --border-color: #374151;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input,
+button {
+    border-color: var(--border-color);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+input::placeholder {
+    color: var(--secondary-text-color);
+}
+
+button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
